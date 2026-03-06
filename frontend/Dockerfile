@@ -2,12 +2,15 @@ FROM node:18
 
 WORKDIR /app
 
+# enable yarn
+RUN corepack enable
+
 COPY package.json ./
 
-RUN npm install
+RUN yarn install
 
 COPY . .
 
 EXPOSE 3000
 
-CMD ["npm","run","dev","--","--host","0.0.0.0"]
+CMD ["yarn","dev","--host","0.0.0.0"]
