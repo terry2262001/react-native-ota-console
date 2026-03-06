@@ -39,3 +39,7 @@ build/
 *.db
 *.sqlite
 
+
+#Front 
+frontend/.yarn/"
+frontend/.pnp*
